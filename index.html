@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sorteio exclusivo da Live — Método Travessia | Letícia Kratka</title>
+<title>Sorteio exclusivo do Método Travessia | Letícia Kratka</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@300;400;500;600;700;800&display=swap">
@@ -542,10 +542,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <div class="progress-wrap" id="progressWrap">
-  <div class="progress-meta">
-    <span id="progressLabel">Etapa 1 de 6</span>
-    <span id="progressPercent">17%</span>
-  </div>
   <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
 </div>
 
@@ -554,18 +550,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- ===== INTRO ===== -->
     <div class="step active" id="step-intro">
-      <span class="intro-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
-        Vagas limitadas na live
-      </span>
-      <h1>Participe do sorteio exclusivo da <em>Live do Método Travessia</em></h1>
-      <p class="subtitle">Preencha o formulário abaixo para participar do sorteio exclusivo. Além disso, suas respostas vão me ajudar a preparar um conteúdo ainda mais útil para a aula ao vivo.</p>
+      <h1>Participe do sorteio exclusivo do <em>Método Travessia</em></h1>
 
       <div class="info-block">
         <div class="info-block-title">🎁 O que você concorre</div>
         <ul class="info-list">
-          <li><strong>Método Travessia</strong> — curso que entrega um passo a passo com ferramentas práticas pra organizar sua vida financeira e investir.</li>
-          <li><strong>1h de Consultoria individual com Letícia Kratka</strong> — especialista em finanças pessoais.</li>
+          <li><strong>Método Travessia</strong>: curso que entrega um passo a passo com ferramentas práticas pra organizar sua vida financeira e investir.</li>
+          <li><strong>1h de Consultoria individual com Letícia Kratka</strong>: especialista em finanças pessoais.</li>
         </ul>
       </div>
 
@@ -580,7 +571,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul class="intro-list">
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Leva alguns minutinhos — suas respostas me ajudam a preparar a aula
+          Leva alguns minutinhos e já me ajuda a preparar a aula
         </li>
       </ul>
       <button type="button" class="btn btn-start" id="btnStart">
@@ -662,7 +653,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="field">
           <div class="choice-group" id="grp-situacao">
             <label class="choice"><input type="radio" name="situacao" value="Tenho dívidas que travam minha vida financeira."><span class="choice-mark"></span><span class="choice-label">Tenho dívidas que travam minha vida financeira.</span></label>
-            <label class="choice"><input type="radio" name="situacao" value="Ganho bem, mas gasto quase tudo — não sobra nada."><span class="choice-mark"></span><span class="choice-label">Ganho bem, mas gasto quase tudo — não sobra nada.</span></label>
+            <label class="choice"><input type="radio" name="situacao" value="Ganho bem, mas gasto quase tudo - não sobra nada/quase nada."><span class="choice-mark"></span><span class="choice-label">Ganho bem, mas gasto quase tudo - não sobra nada/quase nada.</span></label>
             <label class="choice"><input type="radio" name="situacao" value="Consigo guardar um pouco, mas não sei se estou investindo certo."><span class="choice-mark"></span><span class="choice-label">Consigo guardar um pouco, mas não sei se estou investindo certo.</span></label>
             <label class="choice"><input type="radio" name="situacao" value="Tenho investimentos, mas não sei se vou alcançar meus objetivos."><span class="choice-mark"></span><span class="choice-label">Tenho investimentos, mas não sei se vou alcançar meus objetivos.</span></label>
             <label class="choice"><input type="radio" name="situacao" value="Tenho dinheiro espalhado, sem visão do todo."><span class="choice-mark"></span><span class="choice-label">Tenho dinheiro espalhado, sem visão do todo.</span></label>
@@ -881,8 +872,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   const progressWrap = document.getElementById('progressWrap');
   const progressFill = document.getElementById('progressFill');
-  const progressLabel = document.getElementById('progressLabel');
-  const progressPercent = document.getElementById('progressPercent');
   const stepIntro = document.getElementById('step-intro');
   const wizardForm = document.getElementById('wizardForm');
   const stepFinal = document.getElementById('step-final');
@@ -891,8 +880,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   function updateProgress() {
     const pct = Math.round((currentStep / TOTAL_STEPS) * 100);
     progressFill.style.width = pct + '%';
-    progressLabel.textContent = `Etapa ${currentStep} de ${TOTAL_STEPS}`;
-    progressPercent.textContent = pct + '%';
   }
 
   function showStep(n, direction) {
