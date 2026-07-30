@@ -610,21 +610,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- STEP 2 -->
       <div class="step" data-step="2">
-        <span class="eyebrow">Um pouco do seu contexto</span>
-        <h2>Qual faixa representa melhor sua renda mensal?</h2>
+        <span class="eyebrow">Pra começar</span>
+        <h2>Na sua vida financeira, qual é a sua maior dor hoje?</h2>
+        <p class="subtitle">Pode escrever com suas palavras, sem filtro.</p>
         <div class="field">
-          <div class="choice-group" id="grp-renda">
-            <label class="choice"><input type="radio" name="renda" value="Abaixo de R$5.000"><span class="choice-mark"></span><span class="choice-label">Abaixo de R$5.000</span></label>
-            <label class="choice"><input type="radio" name="renda" value="De R$5.000 a R$7.000"><span class="choice-mark"></span><span class="choice-label">De R$5.000 a R$7.000</span></label>
-            <label class="choice"><input type="radio" name="renda" value="De R$7.000 a R$12.000"><span class="choice-mark"></span><span class="choice-label">De R$7.000 a R$12.000</span></label>
-            <label class="choice"><input type="radio" name="renda" value="De R$12.000 a R$18.000"><span class="choice-mark"></span><span class="choice-label">De R$12.000 a R$18.000</span></label>
-            <label class="choice"><input type="radio" name="renda" value="De R$18.000 a R$50.000"><span class="choice-mark"></span><span class="choice-label">De R$18.000 a R$50.000</span></label>
-            <label class="choice"><input type="radio" name="renda" value="Acima de R$50.000"><span class="choice-mark"></span><span class="choice-label">Acima de R$50.000</span></label>
-          </div>
+          <textarea id="maiorDor" placeholder="O que mais te incomoda hoje na sua vida financeira?" style="min-height:120px;"></textarea>
         </div>
-
-        <p class="error-msg" id="err-2">Escolhe uma faixa de renda.</p>
-
+        <p class="error-msg" id="err-2">Escreve sua resposta antes de continuar.</p>
         <div class="nav-row">
           <button type="button" class="btn btn-secondary" data-back="2">Voltar</button>
           <button type="button" class="btn btn-primary" data-next="2">Próximo</button>
@@ -633,21 +625,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- STEP 3 -->
       <div class="step" data-step="3">
-        <span class="eyebrow">Pra começar</span>
-        <h2>Na sua vida financeira, qual é a sua maior dor hoje?</h2>
-        <p class="subtitle">Pode escrever com suas palavras, sem filtro.</p>
-        <div class="field">
-          <textarea id="maiorDor" placeholder="O que mais te incomoda hoje na sua vida financeira?" style="min-height:120px;"></textarea>
-        </div>
-        <p class="error-msg" id="err-3">Escreve sua resposta antes de continuar.</p>
-        <div class="nav-row">
-          <button type="button" class="btn btn-secondary" data-back="3">Voltar</button>
-          <button type="button" class="btn btn-primary" data-next="3">Próximo</button>
-        </div>
-      </div>
-
-      <!-- STEP 4 -->
-      <div class="step" data-step="4">
         <span class="eyebrow">Se identifique</span>
         <h2>Hoje, qual dessas frases mais parece com sua realidade?</h2>
         <div class="field">
@@ -666,7 +643,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
         </div>
-        <p class="error-msg" id="err-4">Escolhe a opção que mais parece com você.</p>
+        <p class="error-msg" id="err-3">Escolhe a opção que mais parece com você.</p>
+        <div class="nav-row">
+          <button type="button" class="btn btn-secondary" data-back="3">Voltar</button>
+          <button type="button" class="btn btn-primary" data-next="3">Próximo</button>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="step" data-step="4">
+        <span class="eyebrow">Sendo bem sincero(a)</span>
+        <h2>Como você se sente quando pensa na sua vida financeira hoje?</h2>
+        <div class="field">
+          <textarea id="comoSente" placeholder="Escreve o que vier à cabeça" style="min-height:120px;"></textarea>
+        </div>
+        <p class="error-msg" id="err-4">Escreve sua resposta antes de continuar.</p>
         <div class="nav-row">
           <button type="button" class="btn btn-secondary" data-back="4">Voltar</button>
           <button type="button" class="btn btn-primary" data-next="4">Próximo</button>
@@ -675,12 +666,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- STEP 5 -->
       <div class="step" data-step="5">
-        <span class="eyebrow">Seu histórico</span>
-        <h2>O que você já tentou fazer para organizar sua vida financeira? Por que não funcionou?</h2>
+        <span class="eyebrow">Uma pergunta direta</span>
+        <h2>Hoje você sabe responder, sem fazer contas, quando vai alcançar seu principal objetivo financeiro?</h2>
         <div class="field">
-          <textarea id="jaTentou" placeholder="Conta o que você já tentou e o que travou" style="min-height:120px;"></textarea>
+          <div class="choice-group" id="grp-sabeQuando">
+            <label class="choice"><input type="radio" name="sabeQuando" value="Sim"><span class="choice-mark"></span><span class="choice-label">Sim.</span></label>
+            <label class="choice"><input type="radio" name="sabeQuando" value="Não"><span class="choice-mark"></span><span class="choice-label">Não.</span></label>
+          </div>
         </div>
-        <p class="error-msg" id="err-5">Escreve sua resposta antes de continuar.</p>
+        <p class="error-msg" id="err-5">Escolhe Sim ou Não.</p>
         <div class="nav-row">
           <button type="button" class="btn btn-secondary" data-back="5">Voltar</button>
           <button type="button" class="btn btn-primary" data-next="5">Próximo</button>
@@ -689,10 +683,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- STEP 6 -->
       <div class="step" data-step="6">
-        <span class="eyebrow">Sendo bem sincero(a)</span>
-        <h2>Como você se sente quando pensa na sua vida financeira hoje?</h2>
+        <span class="eyebrow">Seus obstáculos</span>
+        <h2>O que mais impede você de organizar sua vida financeira?</h2>
         <div class="field">
-          <textarea id="comoSente" placeholder="Escreve o que vier à cabeça" style="min-height:120px;"></textarea>
+          <textarea id="oQueImpede" placeholder="Escreva o que mais te trava hoje" style="min-height:120px;"></textarea>
         </div>
         <p class="error-msg" id="err-6">Escreve sua resposta antes de continuar.</p>
         <div class="nav-row">
@@ -703,28 +697,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- STEP 7 -->
       <div class="step" data-step="7">
-        <span class="eyebrow">Seu objetivo</span>
-        <h2>Qual é o seu principal objetivo financeiro hoje?</h2>
+        <span class="eyebrow">Últimas perguntas</span>
+        <h2>Complete a frase: "Se daqui a um ano eu continuar exatamente como estou hoje, o que mais vai me frustrar?"</h2>
         <div class="field">
-          <div class="choice-group" id="grp-objetivo">
-            <label class="choice"><input type="radio" name="objetivo" value="Ter controle e clareza dos meus gastos"><span class="choice-mark"></span><span class="choice-label">Ter controle e clareza dos meus gastos</span></label>
-            <label class="choice"><input type="radio" name="objetivo" value="Quitar dívidas"><span class="choice-mark"></span><span class="choice-label">Quitar dívidas</span></label>
-            <label class="choice"><input type="radio" name="objetivo" value="Ter liberdade financeira"><span class="choice-mark"></span><span class="choice-label">Ter liberdade financeira</span></label>
-            <label class="choice"><input type="radio" name="objetivo" value="Me aposentar com tranquilidade"><span class="choice-mark"></span><span class="choice-label">Me aposentar com tranquilidade</span></label>
-            <label class="choice"><input type="radio" name="objetivo" value="Investir melhor"><span class="choice-mark"></span><span class="choice-label">Investir melhor</span></label>
-            <label class="choice"><input type="radio" name="objetivo" value="Construir patrimônio"><span class="choice-mark"></span><span class="choice-label">Construir patrimônio</span></label>
-            <label class="choice"><input type="radio" name="objetivo" value="Ter previsibilidade de quando vou alcançar meus objetivos"><span class="choice-mark"></span><span class="choice-label">Ter previsibilidade de quando vou alcançar meus objetivos</span></label>
-            <label class="choice"><input type="radio" name="objetivo" value="Comprar um imóvel"><span class="choice-mark"></span><span class="choice-label">Comprar um imóvel</span></label>
-            <label class="choice"><input type="radio" name="objetivo" value="Outro"><span class="choice-mark"></span><span class="choice-label">Outro</span></label>
-          </div>
-          <div class="conditional-field" id="cond-objetivo">
-            <div class="field" style="margin-top:12px;">
-              <label for="objetivoOutro">Qual?</label>
-              <input type="text" id="objetivoOutro" placeholder="Conte qual é o seu objetivo">
-            </div>
-          </div>
+          <textarea id="frustracao1Ano" placeholder="Escreva sua resposta aqui..." style="min-height:120px;"></textarea>
         </div>
-        <p class="error-msg" id="err-7">Escolhe uma opção de objetivo.</p>
+        <p class="error-msg" id="err-7">Escreve sua resposta antes de continuar.</p>
         <div class="nav-row">
           <button type="button" class="btn btn-secondary" data-back="7">Voltar</button>
           <button type="button" class="btn btn-primary" data-next="7">Próximo</button>
@@ -733,15 +711,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- STEP 8 -->
       <div class="step" data-step="8">
-        <span class="eyebrow">Uma pergunta direta</span>
-        <h2>Hoje você sabe responder, sem fazer contas, quando vai alcançar seu principal objetivo financeiro?</h2>
+        <span class="eyebrow">Quase lá</span>
+        <h2>Se eu te mostrasse um caminho simples para saber quanto guardar, onde investir e quando cada sonho vai acontecer, você teria interesse?</h2>
         <div class="field">
-          <div class="choice-group" id="grp-sabeQuando">
-            <label class="choice"><input type="radio" name="sabeQuando" value="Sim"><span class="choice-mark"></span><span class="choice-label">Sim.</span></label>
-            <label class="choice"><input type="radio" name="sabeQuando" value="Não"><span class="choice-mark"></span><span class="choice-label">Não.</span></label>
+          <div class="choice-group" id="grp-teriaInteresse">
+            <label class="choice"><input type="radio" name="teriaInteresse" value="Sim"><span class="choice-mark"></span><span class="choice-label">Sim.</span></label>
+            <label class="choice"><input type="radio" name="teriaInteresse" value="Talvez"><span class="choice-mark"></span><span class="choice-label">Talvez.</span></label>
+            <label class="choice"><input type="radio" name="teriaInteresse" value="Não"><span class="choice-mark"></span><span class="choice-label">Não.</span></label>
           </div>
         </div>
-        <p class="error-msg" id="err-8">Escolhe Sim ou Não.</p>
+        <p class="error-msg" id="err-8">Escolhe uma opção.</p>
         <div class="nav-row">
           <button type="button" class="btn btn-secondary" data-back="8">Voltar</button>
           <button type="button" class="btn btn-primary" data-next="8">Próximo</button>
@@ -750,10 +729,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- STEP 9 -->
       <div class="step" data-step="9">
-        <span class="eyebrow">Seus obstáculos</span>
-        <h2>O que mais impede você de organizar sua vida financeira?</h2>
+        <span class="eyebrow">Sendo bem sincero(a)</span>
+        <h2>Qual é o seu maior medo em relação ao seu futuro financeiro?</h2>
         <div class="field">
-          <textarea id="oQueImpede" placeholder="Escreva o que mais te trava hoje" style="min-height:120px;"></textarea>
+          <textarea id="maiorMedo" placeholder="Escreva sua resposta aqui..." style="min-height:120px;"></textarea>
         </div>
         <p class="error-msg" id="err-9">Escreve sua resposta antes de continuar.</p>
         <div class="nav-row">
@@ -764,62 +743,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- STEP 10 -->
       <div class="step" data-step="10">
-        <span class="eyebrow">Sendo bem sincero(a)</span>
-        <h2>O que faria você considerar entrar no Método Travessia hoje?</h2>
+        <span class="eyebrow">Última pergunta</span>
+        <h2>Qual faixa representa melhor sua renda mensal?</h2>
         <div class="field">
-          <textarea id="oQueFaria" placeholder="Escreve com calma, isso me ajuda muito a preparar a aula" style="min-height:120px;"></textarea>
-        </div>
-        <p class="error-msg" id="err-10">Escreve sua resposta antes de continuar.</p>
-        <div class="nav-row">
-          <button type="button" class="btn btn-secondary" data-back="10">Voltar</button>
-          <button type="button" class="btn btn-primary" data-next="10">Próximo</button>
-        </div>
-      </div>
-
-      <!-- STEP 11 -->
-      <div class="step" data-step="11">
-        <span class="eyebrow">Quase lá</span>
-        <h2>Se eu te mostrasse um caminho simples para saber quanto guardar, onde investir e quando cada sonho vai acontecer, você teria interesse?</h2>
-        <div class="field">
-          <div class="choice-group" id="grp-teriaInteresse">
-            <label class="choice"><input type="radio" name="teriaInteresse" value="Sim"><span class="choice-mark"></span><span class="choice-label">Sim.</span></label>
-            <label class="choice"><input type="radio" name="teriaInteresse" value="Talvez"><span class="choice-mark"></span><span class="choice-label">Talvez.</span></label>
-            <label class="choice"><input type="radio" name="teriaInteresse" value="Não"><span class="choice-mark"></span><span class="choice-label">Não.</span></label>
+          <div class="choice-group" id="grp-renda">
+            <label class="choice"><input type="radio" name="renda" value="Abaixo de R$5.000"><span class="choice-mark"></span><span class="choice-label">Abaixo de R$5.000</span></label>
+            <label class="choice"><input type="radio" name="renda" value="De R$5.000 a R$7.000"><span class="choice-mark"></span><span class="choice-label">De R$5.000 a R$7.000</span></label>
+            <label class="choice"><input type="radio" name="renda" value="De R$7.000 a R$12.000"><span class="choice-mark"></span><span class="choice-label">De R$7.000 a R$12.000</span></label>
+            <label class="choice"><input type="radio" name="renda" value="De R$12.000 a R$18.000"><span class="choice-mark"></span><span class="choice-label">De R$12.000 a R$18.000</span></label>
+            <label class="choice"><input type="radio" name="renda" value="De R$18.000 a R$50.000"><span class="choice-mark"></span><span class="choice-label">De R$18.000 a R$50.000</span></label>
+            <label class="choice"><input type="radio" name="renda" value="Acima de R$50.000"><span class="choice-mark"></span><span class="choice-label">Acima de R$50.000</span></label>
           </div>
         </div>
-        <p class="error-msg" id="err-11">Escolhe uma opção.</p>
-        <div class="nav-row">
-          <button type="button" class="btn btn-secondary" data-back="11">Voltar</button>
-          <button type="button" class="btn btn-primary" data-next="11">Próximo</button>
-        </div>
-      </div>
 
-      <!-- STEP 12 -->
-      <div class="step" data-step="12">
-        <span class="eyebrow">Últimas perguntas</span>
-        <h2>Complete a frase: "Se daqui a um ano eu continuar exatamente como estou hoje, o que mais vai me frustrar?"</h2>
-        <div class="field">
-          <textarea id="frustracao1Ano" placeholder="Escreva sua resposta aqui..." style="min-height:120px;"></textarea>
-        </div>
-        <p class="error-msg" id="err-12">Escreve sua resposta antes de continuar.</p>
-        <div class="nav-row">
-          <button type="button" class="btn btn-secondary" data-back="12">Voltar</button>
-          <button type="button" class="btn btn-primary" data-next="12">Próximo</button>
-        </div>
-      </div>
-
-      <!-- STEP 13 -->
-      <div class="step" data-step="13">
-        <span class="eyebrow">Última pergunta</span>
-        <h2>Se você pudesse fazer apenas UMA pergunta sobre dinheiro antes da abertura das inscrições do Método Travessia, qual seria?</h2>
-
-        <div class="field">
-          <textarea id="perguntaDinheiro" placeholder="Escreva sua pergunta aqui..." style="min-height:120px;"></textarea>
-        </div>
-        <p class="error-msg" id="err-13">Escreve sua pergunta antes de enviar.</p>
+        <p class="error-msg" id="err-10">Escolhe uma faixa de renda.</p>
 
         <div class="nav-row">
-          <button type="button" class="btn btn-secondary" data-back="13">Voltar</button>
+          <button type="button" class="btn btn-secondary" data-back="10">Voltar</button>
           <button type="submit" class="btn btn-primary" id="submitBtn">
             <span id="submitLabel">Enviar e participar do sorteio</span>
             <span class="spinner" id="submitSpinner"></span>
@@ -867,7 +807,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 
   // ======= ESTADO / NAVEGAÇÃO =======
-  const TOTAL_STEPS = 13;
+  const TOTAL_STEPS = 10;
   let currentStep = 1;
 
   const progressWrap = document.getElementById('progressWrap');
@@ -945,69 +885,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       return ok;
     }
     if (n === 2) {
-      const renda = document.querySelector('input[name="renda"]:checked');
-      const ok = !!renda;
+      const ok = document.getElementById('maiorDor').value.trim().length > 0;
       setError('err-2', !ok);
       return ok;
     }
     if (n === 3) {
-      const ok = document.getElementById('maiorDor').value.trim().length > 0;
+      const situacao = document.querySelector('input[name="situacao"]:checked');
+      const situacaoOutroOk = !situacao || situacao.value !== 'Outro' || document.getElementById('situacaoOutro').value.trim().length > 0;
+      const ok = !!situacao && situacaoOutroOk;
       setError('err-3', !ok);
       return ok;
     }
     if (n === 4) {
-      const situacao = document.querySelector('input[name="situacao"]:checked');
-      const situacaoOutroOk = !situacao || situacao.value !== 'Outro' || document.getElementById('situacaoOutro').value.trim().length > 0;
-      const ok = !!situacao && situacaoOutroOk;
+      const ok = document.getElementById('comoSente').value.trim().length > 0;
       setError('err-4', !ok);
       return ok;
     }
     if (n === 5) {
-      const ok = document.getElementById('jaTentou').value.trim().length > 0;
+      const ok = !!document.querySelector('input[name="sabeQuando"]:checked');
       setError('err-5', !ok);
       return ok;
     }
     if (n === 6) {
-      const ok = document.getElementById('comoSente').value.trim().length > 0;
+      const ok = document.getElementById('oQueImpede').value.trim().length > 0;
       setError('err-6', !ok);
       return ok;
     }
     if (n === 7) {
-      const objetivo = document.querySelector('input[name="objetivo"]:checked');
-      const objetivoOutroOk = !objetivo || objetivo.value !== 'Outro' || document.getElementById('objetivoOutro').value.trim().length > 0;
-      const ok = !!objetivo && objetivoOutroOk;
+      const ok = document.getElementById('frustracao1Ano').value.trim().length > 0;
       setError('err-7', !ok);
       return ok;
     }
     if (n === 8) {
-      const ok = !!document.querySelector('input[name="sabeQuando"]:checked');
+      const ok = !!document.querySelector('input[name="teriaInteresse"]:checked');
       setError('err-8', !ok);
       return ok;
     }
     if (n === 9) {
-      const ok = document.getElementById('oQueImpede').value.trim().length > 0;
+      const ok = document.getElementById('maiorMedo').value.trim().length > 0;
       setError('err-9', !ok);
       return ok;
     }
     if (n === 10) {
-      const ok = document.getElementById('oQueFaria').value.trim().length > 0;
+      const ok = !!document.querySelector('input[name="renda"]:checked');
       setError('err-10', !ok);
-      return ok;
-    }
-    if (n === 11) {
-      const ok = !!document.querySelector('input[name="teriaInteresse"]:checked');
-      setError('err-11', !ok);
-      return ok;
-    }
-    if (n === 12) {
-      const ok = document.getElementById('frustracao1Ano').value.trim().length > 0;
-      setError('err-12', !ok);
-      return ok;
-    }
-    if (n === 13) {
-      const pergunta = document.getElementById('perguntaDinheiro').value.trim();
-      const ok = pergunta.length > 0;
-      setError('err-13', !ok);
       return ok;
     }
     return true;
@@ -1019,16 +940,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       document.getElementById('cond-situacao').classList.toggle('show', this.value === 'Outro');
     });
   });
-  document.querySelectorAll('input[name="objetivo"]').forEach(r => {
-    r.addEventListener('change', function () {
-      document.getElementById('cond-objetivo').classList.toggle('show', this.value === 'Outro');
-    });
-  });
 
   // ======= ENVIO =======
   wizardForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    if (!validateStep(13)) return;
+    if (!validateStep(10)) return;
 
     const submitBtn = document.getElementById('submitBtn');
     const submitLabel = document.getElementById('submitLabel');
@@ -1038,7 +954,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     submitSpinner.classList.add('show');
 
     const situacaoEl = document.querySelector('input[name="situacao"]:checked');
-    const objetivoEl = document.querySelector('input[name="objetivo"]:checked');
     const sabeQuandoEl = document.querySelector('input[name="sabeQuando"]:checked');
     const teriaInteresseEl = document.querySelector('input[name="teriaInteresse"]:checked');
 
@@ -1047,20 +962,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       nome: document.getElementById('nome').value.trim(),
       whatsapp: document.getElementById('whatsapp').value.trim(),
       email: document.getElementById('email').value.trim(),
-      renda: (document.querySelector('input[name="renda"]:checked') || {}).value || '',
       maiorDor: document.getElementById('maiorDor').value.trim(),
       situacao: situacaoEl ? situacaoEl.value : '',
       situacaoOutro: document.getElementById('situacaoOutro').value.trim(),
-      jaTentou: document.getElementById('jaTentou').value.trim(),
       comoSente: document.getElementById('comoSente').value.trim(),
-      objetivo: objetivoEl ? objetivoEl.value : '',
-      objetivoOutro: document.getElementById('objetivoOutro').value.trim(),
       sabeQuando: sabeQuandoEl ? sabeQuandoEl.value : '',
       oQueImpede: document.getElementById('oQueImpede').value.trim(),
-      oQueFaria: document.getElementById('oQueFaria').value.trim(),
-      teriaInteresse: teriaInteresseEl ? teriaInteresseEl.value : '',
       frustracao1Ano: document.getElementById('frustracao1Ano').value.trim(),
-      perguntaDinheiro: document.getElementById('perguntaDinheiro').value.trim()
+      teriaInteresse: teriaInteresseEl ? teriaInteresseEl.value : '',
+      maiorMedo: document.getElementById('maiorMedo').value.trim(),
+      renda: (document.querySelector('input[name="renda"]:checked') || {}).value || ''
     }, getUtmParams());
 
     const body = new URLSearchParams(payload);

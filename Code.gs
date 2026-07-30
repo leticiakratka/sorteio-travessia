@@ -54,22 +54,18 @@ function doPost(e) {
   } else if (data.formulario === 'sorteio') {
     appendRow(ss, 'Sorteio',
       [
-        'Data/Hora', 'Nome', 'WhatsApp', 'E-mail', 'Faixa de renda',
+        'Data/Hora', 'Nome', 'WhatsApp', 'E-mail',
         'Maior dor hoje', 'Situação atual', 'Situação atual (Outro)',
-        'O que já tentou / por que não funcionou', 'Como se sente',
-        'Objetivo principal', 'Objetivo principal (Outro)',
-        'Sabe quando vai alcançar sem contas', 'O que impede de organizar',
-        'O que faria considerar entrar', 'Teria interesse',
-        'Frustração daqui 1 ano', 'Pergunta sobre dinheiro'
+        'Como se sente', 'Sabe quando vai alcançar sem contas',
+        'O que impede de organizar', 'Frustração daqui 1 ano',
+        'Teria interesse', 'Maior medo futuro financeiro', 'Faixa de renda'
       ].concat(UTM_HEADERS),
       [
-        new Date(), data.nome || '', data.whatsapp || '', data.email || '', data.renda || '',
+        new Date(), data.nome || '', data.whatsapp || '', data.email || '',
         data.maiorDor || '', data.situacao || '', data.situacaoOutro || '',
-        data.jaTentou || '', data.comoSente || '',
-        data.objetivo || '', data.objetivoOutro || '',
-        data.sabeQuando || '', data.oQueImpede || '',
-        data.oQueFaria || '', data.teriaInteresse || '',
-        data.frustracao1Ano || '', data.perguntaDinheiro || ''
+        data.comoSente || '', data.sabeQuando || '',
+        data.oQueImpede || '', data.frustracao1Ano || '',
+        data.teriaInteresse || '', data.maiorMedo || '', data.renda || ''
       ].concat(utm)
     );
   } else {
