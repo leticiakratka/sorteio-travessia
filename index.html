@@ -951,6 +951,12 @@
     const situacaoEl = document.querySelector('input[name="situacao"]:checked');
     const sabeQuandoEl = document.querySelector('input[name="sabeQuando"]:checked');
     const teriaInteresseEl = document.querySelector('input[name="teriaInteresse"]:checked');
+    const situacaoOutroTexto = document.getElementById('situacaoOutro').value.trim();
+    // Quando a pessoa escolhe "Outro" e escreve o texto dela, a coluna principal
+    // já vai com o texto escrito em vez do literal "Outro" — mais fácil de ler na planilha.
+    const situacaoValor = situacaoEl && situacaoEl.value === 'Outro' && situacaoOutroTexto
+      ? situacaoOutroTexto
+      : (situacaoEl ? situacaoEl.value : '');
 
     const payload = Object.assign({
       formulario: 'sorteio',
@@ -958,8 +964,8 @@
       whatsapp: document.getElementById('whatsapp').value.trim(),
       email: document.getElementById('email').value.trim(),
       maiorDor: document.getElementById('maiorDor').value.trim(),
-      situacao: situacaoEl ? situacaoEl.value : '',
-      situacaoOutro: document.getElementById('situacaoOutro').value.trim(),
+      situacao: situacaoValor,
+      situacaoOutro: situacaoOutroTexto,
       comoSente: document.getElementById('comoSente').value.trim(),
       sabeQuando: sabeQuandoEl ? sabeQuandoEl.value : '',
       oQueImpede: document.getElementById('oQueImpede').value.trim(),
